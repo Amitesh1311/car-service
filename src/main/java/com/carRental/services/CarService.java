@@ -74,7 +74,7 @@ public class CarService {
 		// TODO Auto-generated method stub
 		try {
 			carRepository.deleteById(id);
-			return new ResponseEntity<>("Car Deleted Successfully", HttpStatusCode.valueOf(200));
+			return new ResponseEntity<>("Car Deleted Successfully. id->" + id, HttpStatusCode.valueOf(200));
 
 		} catch (Exception e) {
 			return new ResponseEntity<>("Error", HttpStatusCode.valueOf(400));
