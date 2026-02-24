@@ -44,7 +44,7 @@ public class AuthenticationService {
 
 		Optional<UserInfo> userObj = userRepository.findByEmail(registerRequest.getEmail());
 		if (!userObj.isEmpty()) {
-			return new ResponseEntity<>("User with " + registerRequest.getEmail() + " already present.",
+			return new ResponseEntity<>("User with " + registerRequest.getEmail() + " already present. Use another email. ",
 					HttpStatus.valueOf(409));
 		}
 		UserInfo user = new UserInfo();
